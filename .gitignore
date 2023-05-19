@@ -6,6 +6,6 @@
 /.idea
 /.vagrant
 Homestead.json
-.env
+
 
 *.sublime-*
