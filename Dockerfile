@@ -22,6 +22,10 @@ RUN chown -R www-data:www-data /var/www/html
 RUN apt-get update && \
     apt-get install -y git zip unzip
 
+RUN apt-get update && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo_mysql
+    
+
 # Descargar e instalar Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
