@@ -35,6 +35,7 @@ class UserController extends ApiController
         return $this->showAll($usuarios);
     }
 
+    // Funcionalidad de la store
     /**
      * Store a newly created resource in storage.
      *
@@ -74,6 +75,7 @@ class UserController extends ApiController
         
     }
 
+    // funcionalidad de actualizar
     /**
      * Update the specified resource in storage.
      *
