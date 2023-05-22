@@ -12,7 +12,7 @@ class ProductBuyerController extends ApiController
     {
         parent::__construct();
     }
-    
+    //PRODUCTO
     /**
      * Display a listing of the resource.
      *

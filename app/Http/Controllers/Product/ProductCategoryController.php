@@ -7,6 +7,7 @@ use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 
+//PRODUCT CATEGORY CONTROLLER 
 class ProductCategoryController extends ApiController
 {
     public function __construct()
@@ -38,6 +39,8 @@ class ProductCategoryController extends ApiController
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
+
+     //ACTUALIZAR
     public function update(Request $request, Product $product, Category $category)
     {
         //sync, attach, syncWithoutDetaching

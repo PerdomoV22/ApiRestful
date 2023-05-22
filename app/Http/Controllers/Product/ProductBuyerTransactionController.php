@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ApiController;
 use App\Transformers\TransactionTransformer;
 
+// PRODUCTO BUYER TRANSACTION CONTROLLER
 class ProductBuyerTransactionController extends ApiController
 {
     public function __construct()
