@@ -6,6 +6,7 @@ use App\Seller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 
+//sellercategorycontroller
 class SellerCategoryController extends ApiController
 {
     public function __construct()

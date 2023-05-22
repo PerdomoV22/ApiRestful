@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 use App\Transformers\CategoryTransformer;
 
+//categorycontroller
 class CategoryController extends ApiController
 {
     public function __construct()

@@ -12,6 +12,7 @@ use App\Transformers\ProductTransformer;
 use Illuminate\Auth\AuthenticationException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
+//sellerProductoController
 class SellerProductController extends ApiController
 {
     public function __construct()
