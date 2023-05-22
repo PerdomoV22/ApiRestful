@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+
+     /*Se ejecuta el metodo run donde se insertan los datos que haran parte de nuestra base de datos*/
     public function run()
     {
     	DB::statement('SET FOREIGN_KEY_CHECKS = 0');
@@ -34,6 +36,7 @@ class DatabaseSeeder extends Seeder
         $cantidadProductos = 1000;
         $cantidadTransacciones = 1000;
 
+/* Se crearon la cantidad de usuarios,categorias,productos y transacciones para poder tener registro en la base de datos*/
 
         factory(User::class, $cantidadUsuarios)->create();
         factory(Category::class, $cantidadCategorias)->create();

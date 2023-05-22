@@ -52,6 +52,7 @@ $factory->define(Product::class, function (Faker\Generator $faker) {
     ];
 });
 
+
 $factory->define(Transaction::class, function (Faker\Generator $faker) {
     $vendedor = Seller::has('products')->get()->random();
     $comprador = User::all()->except($vendedor->id)->random();
