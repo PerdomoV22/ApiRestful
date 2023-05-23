@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Transformers\TransactionTransformer;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+//transaction 
 class Transaction extends Model
 {
     use SoftDeletes;

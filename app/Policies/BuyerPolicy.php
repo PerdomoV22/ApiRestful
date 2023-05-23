@@ -7,6 +7,7 @@ use App\Buyer;
 use App\Traits\AdminActions;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
+//buyer policy
 class BuyerPolicy
 {
     use HandlesAuthorization, AdminActions;
