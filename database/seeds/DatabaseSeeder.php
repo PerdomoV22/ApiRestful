@@ -29,10 +29,10 @@ class DatabaseSeeder extends Seeder
         Product::flushEventListeners();
         Transaction::flushEventListeners();
 
-        $cantidadUsuarios = 1000;
+        $cantidadUsuarios = 100;
         $cantidadCategorias = 30;
-        $cantidadProductos = 1000;
-        $cantidadTransacciones = 1000;
+        $cantidadProductos = 100;
+        $cantidadTransacciones = 100;
 
         DB::table('users')->insert([
             'name'  => 'Juan Perdomo',
