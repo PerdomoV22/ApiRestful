@@ -34,6 +34,15 @@ class DatabaseSeeder extends Seeder
         $cantidadProductos = 1000;
         $cantidadTransacciones = 1000;
 
+        DB::table('users')->insert([
+            'name'  => 'Juan Perdomo',
+            'email'     => 'perdomov.j07@gmail.com',
+            'password'  => bcrypt('1234'),
+            'remember_token' => 'bl5rsu3R8c',
+            'verified'=> 0,
+            'verification_token'=>'',
+            'admin' => false,
+        ]);
 
         factory(User::class, $cantidadUsuarios)->create();
         factory(Category::class, $cantidadCategorias)->create();
