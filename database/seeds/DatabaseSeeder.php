@@ -29,10 +29,19 @@ class DatabaseSeeder extends Seeder
         Product::flushEventListeners();
         Transaction::flushEventListeners();
 
-        $cantidadUsuarios = 1000;
+        $contraseña = "matiasjuan";
+        $user = new User([
+            "email" => "perdomov.j07@gmail.com",
+            "password" => Hash::make($contraseña),
+            "name" => "Juan Perdomo",
+            'admin' => false,
+        ]);
+        $user->saveOrFail();
+
+        $cantidadUsuarios = 10;
         $cantidadCategorias = 30;
-        $cantidadProductos = 1000;
-        $cantidadTransacciones = 1000;
+        $cantidadProductos = 10;
+        $cantidadTransacciones = 10;
 
 
         factory(User::class, $cantidadUsuarios)->create();
