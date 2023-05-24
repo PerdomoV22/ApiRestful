@@ -11,6 +11,9 @@ class CreateTransactionsTable extends Migration
      *
      * @return void
      */
+
+     /*Se crean los atributos que lleva las transacciones*/ 
+     
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
