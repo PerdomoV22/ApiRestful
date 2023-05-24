@@ -6,6 +6,7 @@ use App\Buyer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 
+//BUYERTRANSACTIONCONTROLLER
 class BuyerTransactionController extends ApiController
 {
     public function __construct()

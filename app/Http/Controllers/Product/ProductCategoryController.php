@@ -55,6 +55,7 @@ class ProductCategoryController extends ApiController
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
+    //destroy
     public function destroy(Product $product, Category $category)
     {
         if (!$product->categories()->find($category->id)) {
