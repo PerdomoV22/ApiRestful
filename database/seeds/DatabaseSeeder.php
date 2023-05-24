@@ -34,15 +34,17 @@ class DatabaseSeeder extends Seeder
         $cantidadProductos = 100;
         $cantidadTransacciones = 100;
 
-        DB::table('users')->insert([
-            'name'  => 'Juan Perdomo',
-            'email'     => 'perdomov.j07@gmail.com',
-            'password'  => bcrypt('1234'),
+        $contraseña = "matiasjuan";
+        $user = new User([
+            "email" => "perdomov.j07@gmail.com",
+            "password" => Hash::make($contraseña),
+            "name" => "Juan Perdomo",
             'remember_token' => 'bl5rsu3R8c',
             'verified'=> 0,
             'verification_token'=>'',
             'admin' => false,
         ]);
+        $user->saveOrFail();
 
     }
 }
