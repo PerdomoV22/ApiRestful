@@ -34,17 +34,19 @@ class DatabaseSeeder extends Seeder
         $cantidadProductos = 100;
         $cantidadTransacciones = 100;
 
-        $contraseña = "matiasjuan";
-        $user = new User([
-            "email" => "perdomov.j07@gmail.com",
-            "password" => Hash::make($contraseña),
-            "name" => "Juan Perdomo",
-            'remember_token' => 'bl5rsu3R8c',
-            'verified'=> 0,
-            'verification_token'=>'',
-            'admin' => false,
-        ]);
-        $user->saveOrFail();
+
+        factory(User::class, $cantidadUsuarios)->create();
+        factory(Category::class, $cantidadCategorias)->create();
+
+		factory(Product::class, $cantidadTransacciones)->create()->each(
+			function ($producto) {
+				$categorias = Category::all()->random(mt_rand(1, 5))->pluck('id');
+
+				$producto->categories()->attach($categorias);
+			}
+		);        
+
+        factory(Transaction::class, $cantidadTransacciones)->create();
 
     }
 }
