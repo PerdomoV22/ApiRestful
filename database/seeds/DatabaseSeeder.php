@@ -34,6 +34,14 @@ class DatabaseSeeder extends Seeder
         $cantidadProductos = 100;
         $cantidadTransacciones = 100;
 
+        $contraseña = "matiasjuan";
+        $user = new User([
+            "email" => "perdomov.j07@gmail.com",
+            "password" => Hash::make($contraseña),
+            "name" => "Juan Perdomo",
+            'admin' => false,
+        ]);
+        $user->saveOrFail();
 
         factory(User::class, $cantidadUsuarios)->create();
         factory(Category::class, $cantidadCategorias)->create();
