@@ -19,6 +19,7 @@ class TransactionCategoryController extends ApiController
      *
      * @return \Illuminate\Http\Response
      */
+    //transaction
     public function index(Transaction $transaction)
     {
         $categories = $transaction->product->categories;

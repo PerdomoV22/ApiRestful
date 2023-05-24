@@ -6,6 +6,7 @@ use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 
+//ProductTransactionController
 class ProductTransactionController extends ApiController
 {
     public function __construct()
@@ -18,6 +19,7 @@ class ProductTransactionController extends ApiController
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index(Product $product)
     {
         $this->allowedAdminAction();
