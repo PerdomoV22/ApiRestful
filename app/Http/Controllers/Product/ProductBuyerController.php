@@ -10,7 +10,6 @@ class ProductBuyerController extends ApiController
 {
     public function __construct()
     {
-        parent::__construct();
     }
     
     /**
@@ -19,9 +18,7 @@ class ProductBuyerController extends ApiController
      * @return \Illuminate\Http\Response
      */
     public function index(Product $product)
-    {
-        $this->allowedAdminAction();
-        
+    {   
         $buyers = $product->transactions()
             ->with('buyer')
             ->get()

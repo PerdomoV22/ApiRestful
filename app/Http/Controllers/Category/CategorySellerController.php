@@ -10,7 +10,6 @@ class CategorySellerController extends ApiController
 {
     public function __construct()
     {
-        parent::__construct();
     }
     
     /**
@@ -19,9 +18,7 @@ class CategorySellerController extends ApiController
      * @return \Illuminate\Http\Response
      */
     public function index(Category $category)
-    {
-        $this->allowedAdminAction();
-        
+    {   
         $sellers = $category->products()
             ->with('seller')
             ->get()

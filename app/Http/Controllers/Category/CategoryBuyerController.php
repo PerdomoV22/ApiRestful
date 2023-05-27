@@ -10,7 +10,6 @@ class CategoryBuyerController extends ApiController
 {
     public function __construct()
     {
-        parent::__construct();
     }
     
     /**
@@ -19,9 +18,7 @@ class CategoryBuyerController extends ApiController
      * @return \Illuminate\Http\Response
      */
     public function index(Category $category)
-    {
-        $this->allowedAdminAction();
-        
+    {   
         $buyers = $category->products()
             ->whereHas('transactions')
             ->with('transactions.buyer')
