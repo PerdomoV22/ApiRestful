@@ -10,7 +10,6 @@ class SellerBuyerController extends ApiController
 {
     public function __construct()
     {
-        parent::__construct();
     }
     
     /**
@@ -20,8 +19,6 @@ class SellerBuyerController extends ApiController
      */
     public function index(Seller $seller)
     {
-        $this->allowedAdminAction();
-        
         $buyers = $seller->products()
             ->whereHas('transactions')
             ->with('transactions.buyer')

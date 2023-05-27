@@ -10,7 +10,6 @@ class CategoryTransactionController extends ApiController
 {
     public function __construct()
     {
-        parent::__construct();
     }
     
     /**
@@ -20,8 +19,6 @@ class CategoryTransactionController extends ApiController
      */
     public function index(Category $category)
     {
-        $this->allowedAdminAction();
-        
         $transactions = $category->products()
             ->whereHas('transactions')
             ->with('transactions')
